@@ -7,17 +7,15 @@ import com.wordnik.swagger.annotations.ApiOperation;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Api(value = "/resource", description = "About the nessie application") @Path("/resource") @Produces(MediaType.APPLICATION_JSON)
+@Api(value = "/resource", description = "About the application") @Path("/resource")
 public class Resource
 {
     @ApiOperation(
-            value = "About nessie",
-            notes = "About nessie",
+            value = "About",
+            notes = "About",
             response = Response.class) @GET @Timed
     @ApiImplicitParams(value = {@ApiImplicitParam(name = "qparam", value = "Query Parameter", dataType = "string", required = true, paramType = "query")})
 
